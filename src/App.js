@@ -9,7 +9,7 @@ const App = () => {
           <h1 className='col-md-auto text-danger'>Aurous</h1>
         </div>
         <div class="row justify-content-md-center">
-          <form>
+          <form className='col-md-auto'>
             <div className='justify-content-md-center p-4 '>
               <label for="user_login" class="col-md-auto form-label">User</label>
               <input id='user_login' className='form-control' />
