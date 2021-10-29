@@ -8,7 +8,7 @@ function ListField() {
                 <option defaultValue={0} value="0">Seleccione el usuario</option>
                 <ListItem></ListItem>
             </select>
-        </div>
+        </div >
     )
 }
 
