@@ -1,15 +1,11 @@
 import React from 'react'
 
-function ListItem() {
+function ListItem({ user }) {
+    console.log(user)
     return (
         <>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
-            <option value="1"> Manuel</option>
+            <option key={user.id} value={user.id}> {user.name}</option>
+
         </>
     )
 }
