@@ -10,7 +10,7 @@ import Login from "../components/Login/Login";
 import UserDetail from "../components/UserDetail/UserDetail";
 import UserList from "../components/UserList/UserList";
 export const AppRouter = () => (
-    <Router basename="/test"> //add basename
+    <Router basename="/test">
         <div>
             <Switch>
                 <Route exact path="/" component={Login} />
