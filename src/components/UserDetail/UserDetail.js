@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
-import Loading from './Loading';
-import ErrorAlert from './ErrorAlert';
+import Loading from '../Loading';
+import ErrorAlert from '../ErrorAlert';
 
 function UserDetail() {
     const { userId } = useParams();
-    console.log(userId)
     const [name, setName] = useState("")
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
@@ -13,7 +12,6 @@ function UserDetail() {
     const [city, setCity] = useState("")
     const [isLoading, setIsLoading] = useState(true)
     const [message, setMessage] = useState('')
-    const [fetchError, setFetchError] = useState(false)
 
     const getUserData = async () => {
         try {
@@ -30,7 +28,6 @@ function UserDetail() {
                     setIsLoading(false)
                 })
         } catch (error) {
-            setFetchError(true)
             setMessage('Hubo un error al cargar los datos. Compruebe su conexión')
         }
 

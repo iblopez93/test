@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom'
 
 
-import Login from "../components/Login";
-import UserDetail from "../components/UserDetail";
-import UserList from "../components/UserList";
+import Login from "../components/Login/Login";
+import UserDetail from "../components/UserDetail/UserDetail";
+import UserList from "../components/UserList/UserList";
 export const AppRouter = () => (
     <Router>
         <div>

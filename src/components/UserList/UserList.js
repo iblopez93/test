@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import ErrorAlert from './ErrorAlert'
+import ErrorAlert from '../ErrorAlert'
 import ListField from './ListField'
-import Loading from './Loading'
-import UserSearch from './UserSearch'
+import Loading from '../Loading'
+import UserSearch from '../UserSearch'
 
 function UserList() {
     const [users, setUsers] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [message, setMessage] = useState('')
-    const [fetchError, setFetchError] = useState(false)
     const [disabled, setDisabled] = useState(true)
     const [optSelected, setOptSelected] = useState(0)
     const getUsers = async () => {
@@ -23,13 +22,12 @@ function UserList() {
                     name: u.name,
                 }
             })
-            console.log(users)
+
             setUsers(users)
             setIsLoading(false)
 
 
         } catch (e) {
-            setFetchError(true)
             setMessage('Hubo un error al cargar los datos. Compruebe su conexión')
             setDisabled('disabled')
         }
