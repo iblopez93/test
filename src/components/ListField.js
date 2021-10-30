@@ -1,10 +1,17 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-function ListField({ users, setOptSelected }) {
+function ListField({ users, setOptSelected, setDisabled }) {
     const optSelectHandle = (e) => {
         console.log(e.target.value);
         setOptSelected(e.target.value)
+        if (e.target.value === '0') {
+            setDisabled(true)
+            console.log('Entro')
+        }
+        else {
+            setDisabled(false)
+        }
     }
     return (
         <div>
